@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:effects="clr-namespace:XamarinFormsNarratorSample.Views.Effects;assembly=XamarinFormsNarratorSample"
+			 x:Class="XamarinFormsNarratorSample.Views.MainPage">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Button Grid.Row="0"
+				HorizontalOptions="Center"
+				VerticalOptions="Center"
+				BackgroundColor="White"
+				BorderColor="Gray"
+				Text="Change Color"
+				Clicked="Button_Clicked"
+				effects:AccessibilityEffect.AccessibilityLabel="Change background color" />
+
+		<Button Grid.Row="1"
+				HorizontalOptions="Center"
+				VerticalOptions="Center"
+				BackgroundColor="White"
+				BorderColor="Gray"
+				Text="Button hidden from Narrator"
+				Clicked="Button_Clicked"
+				effects:AccessibilityEffect.InAccessibleTree="false" />
+	</Grid>
+</ContentPage>
